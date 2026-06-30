@@ -1,0 +1,183 @@
+/* style for webpage */
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*style for game area*/
+#gameArea{
+    width: 100%;
+    height: 100vh;
+    background-image: url(sprites/spaceBackground.png);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/*style for start screen*/
+#startScreen{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-image: url(sprites/spaceBackground.png);
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/*style for title text*/
+#titleText{
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    font-size: 100px;
+    text-shadow: 0 0 10px red,
+                 0 0 20px red,
+                 0 0 30px red;
+    font-family: Arial, sans-serif;
+    z-index: 10;
+}
+
+/*style for instructions text*/
+#howToPlayText{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: green;
+    font-size: 20px;
+    text-shadow: 0 0 10px green,
+                 0 0 20px green,
+                 0 0 30px green;
+    font-family: Arial, sans-serif;
+    z-index: 10;
+}
+
+/*style for start button*/
+#startButton{
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: green;
+    text-shadow: 0 0 10px green,
+                 0 0 20px green,
+                 0 0 30px green;
+    box-shadow: 0 0 10px white,
+                0 0 20px white,
+                0 0 30px white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/*style for score and lives text*/
+#scoreText{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: rgb(0, 135, 0);
+    text-shadow: 0 0 10px rgb(0, 135, 0),
+                 0 0 20px rgb(0, 135, 0),
+                 0 0 30px rgb(0, 135, 0);
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    z-index: 10;
+}
+
+/*style for live text*/
+#liveText{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: green;
+    text-shadow: 0 0 10px green,
+                 0 0 20px green,
+                 0 0 30px green;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    z-index: 10;
+}
+
+/*style for game over text*/
+#gameOverText{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 10px rgb(255, 0, 0),
+                 0 0 20px rgb(255, 0, 0),
+                 0 0 30px rgb(255, 0, 0);
+    font-size: 100px;
+    font-family: Arial, sans-serif;
+    z-index: 10;
+}
+
+/*style for player and enemy*/
+#player{
+    width: 100px;
+    height: 100px;
+    background-image: url(sprites/playerSprite.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 50px;
+    left: 750px;
+    border-radius: 10px;
+}
+
+/*style for enemy*/
+.enemy{
+    width: 150px;
+    height: 150px;
+    background-image: url(sprites/enemySprite.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+}
+
+/*style for bullet*/
+.bullet{
+    width: 10px;
+    height: 20px;
+    background-color: rgb(246, 69, 172);
+    background-size: cover;
+    position: absolute;
+    box-shadow: 0 0 10px rgb(246, 69, 172),
+                0 0 20px rgb(246, 69, 172),
+                0 0 30px rgb(246, 69, 172);
+    border-radius: 5px;
+}
+
+/*style for restart button*/
+#restartButton{
+    display: none;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: green;
+    text-shadow: 0 0 10px green,
+                 0 0 20px green,
+                 0 0 30px green;
+    box-shadow: 0 0 10px white,
+                0 0 20px white,
+                0 0 30px white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+}

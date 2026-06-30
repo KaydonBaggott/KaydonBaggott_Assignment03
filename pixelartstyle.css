@@ -1,0 +1,183 @@
+/* This is the style sheet for the pixel art cat, it contains the styles for the pixel art and the animations for the different parts of the cat*/
+.pixel-art{
+    display: flex;
+    flex-direction: column; 
+    background-color: white;
+}
+/* This is the row class, it is used to create rows of pixels in the pixel art, it is applied to the divs that contain the pixels*/
+.row{
+    display: flex;
+}
+/* This is the size of each pixel in the pixel art, it is applied to the pixels using the pixel class*/
+.pixel{
+    width: 15px;
+    height: 15px;
+}
+/* These are the different colours used in the pixel art, they are applied to the pixels using classes*/
+.black{
+    background-color: black;
+}
+
+.white{
+    background-color: white;
+}
+
+.grey{
+    background-color: grey;
+}
+
+.darkgrey{
+    background-color: rgb(84, 84, 84);
+}
+
+.pink{
+    background-color: rgb(222, 144, 157);
+}
+
+.lightgrey{
+    background-color: lightgray;
+}
+
+.brown{
+    background-color: rgb(73, 52, 39);
+}
+
+.dark{
+    background-color: rgb(50, 50, 50);
+}
+/*this animation makes the eyes blink every 2 seconds*/
+.eye{
+    animation : blink 2s infinite;
+}
+/* This is the tail wag animation*/
+.tail{
+    animation: wag 0.5s infinite alternate ease-in-out;
+}
+/* This is the ear animation, it makes the ears move up and down*/
+.pixel-art:active .ear1{
+    animation: E1 2.5s infinite alternate ease-in-out;
+}
+/* This is the ear animation, it makes the ears move up and down*/
+
+.pixel-art:active .ear2{
+    animation: E2 2.5s infinite alternate ease-in-out;
+}
+/* This is the ear animation, it makes the ears move up and down*/
+.pixel-art:active .ear3{
+    animation: E3 2.5s infinite alternate ease-in-out;
+}
+/* This is the ear animation, it makes the inner ear dissapear as it moves*/
+.pixel-art:active .dissapear{
+    animation: dissapear 2.5s infinite alternate ease-in-out;
+}
+/* This is an ear animation, it changes the colour of the pixels to create the back of the ear*/
+.pixel-art:active .changeEar{
+    animation: ChangeEar 2.5s infinite alternate ease-in-out;
+}
+/* This is the tongue animation, it makes the tongue change colour to look like its licking*/
+.pixel-art:active .tongue{
+    animation:lick 1s infinite alternate ease-in-out;
+}
+/* This is the mouth animation, it makes the mouth change colour to look like its opening and closing*/
+.pixel-art:active .mouth{
+    animation:open 1s infinite alternate ease-in-out;
+}
+/* This is the heart animation, it makes a heart appear above the cat when you click*/
+.pixel-art:active .heart{
+    animation:pop 1s infinite alternate ease-in-out;
+}
+/* This is the eyes anaimation keyframes, it makes the eyes blink by changing the background colour of the eye pixels*/
+@keyframes blink{
+    0%{
+        background-color: white;
+    }
+    20%{
+        background-color: black;
+    }
+    40%{
+        background-color: white;
+    }
+}
+/* This is the tail animation keyframes, it makes the tail wag by translating the tail pixels left and right*/
+@keyframes wag{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(5px);
+    }
+}
+/* These are the ear animation keyframes, they make the ears move up and down by translating the ear pixels on the y axis*/
+@keyframes E1{
+   from{
+    transform: translateY(0px);
+   } 
+
+   to{
+    transform: translateY(15px);
+   }
+}
+/* These are the ear animation keyframes, they make the ears move up and down by translating the ear pixels on the y axis*/
+@keyframes E2{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(45px);
+    }
+}
+/* These are the ear animation keyframes, they make the ears move up and down by translating the ear pixels on the y axis*/
+@keyframes E3{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(75px);
+    }
+}
+/* This is the inner ear animation keyframes, it makes the inner ear dissapear as it moves by translating the pixels on the y axis and changing the background colour to transparent*/
+@keyframes dissapear{
+    from{
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(75px);
+        background-color: transparent;
+    }
+
+}
+/* This is the ear animation keyframes, it changes the colour of the pixels to create the back of the ear as it moves by translating the pixels on the y axis and changing the background colour to dark grey*/
+@keyframes ChangeEar{
+    100%{
+        background-color: darkgrey;
+    }
+    
+}
+/* This is the tongue animation keyframes, it makes the tongue change colour to look like its licking by changing the background colour of the tongue pixels*/
+@keyframes lick{
+    from{
+        background-color: lightgrey;
+    }
+    to{
+        background-color: rgb(253, 115, 138);
+    }
+}
+/* This is the mouth animation keyframes, it makes the mouth change colour to look like its opening and closing by changing the background colour of the mouth pixels*/
+@keyframes open{
+    from{
+        background-color: lightgrey;
+    }
+    to{
+        background-color: rgb(73, 52, 39);
+    }
+}
+/* This is the heart animation keyframes, it makes a heart appear above the cat when you click by changing the background colour of the heart pixels*/
+@keyframes pop{
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: rgb(255, 0, 0);
+    }
+}
